@@ -1,0 +1,10 @@
+name = "moogle"
+version = "0.1.0"
+defaultTargets = ["moogle"]
+
+[[lean_lib]]
+name = "Moogle"
+
+[[lean_exe]]
+name = "moogle"
+root = "Main"

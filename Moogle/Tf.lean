@@ -26,6 +26,10 @@ def BoW.totalFreq (bow: BoW) : Nat :=
 def List.mergeBoWs (bows: List BoW): BoW :=
   BoW.mergeAll bows
 
+-- Create BoW from a list of words
+def BoW.fromList (words: List String): BoW :=
+  {textFreq := words.foldl (fun acc word => acc.insert word (acc.getD word 0 + 1)) {} }
+
 -- https://en.wikipedia.org/wiki/Tf%E2%80%93idf#Term_frequency
 def tf (term: String) (doc: BoW) : Float :=
   (doc.textFreq.getD term 0).toFloat / doc.totalFreq.toFloat

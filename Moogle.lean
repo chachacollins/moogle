@@ -1,3 +1,5 @@
 -- This module serves as the root of the `Moogle` library.
 -- Import modules here that should be built as part of the library.
 import Moogle.Basic
+import Moogle.Tf
+import Moogle.Idf

@@ -26,5 +26,6 @@ def BoW.totalFreq (bow: BoW) : Nat :=
 def List.mergeBoWs (bows: List BoW): BoW :=
   BoW.mergeAll bows
 
+-- https://en.wikipedia.org/wiki/Tf%E2%80%93idf#Term_frequency
 def tf (term: String) (doc: BoW) : Float :=
   (doc.textFreq.getD term 0).toFloat / doc.totalFreq.toFloat

@@ -10,7 +10,7 @@
   in
   {
     devShells.${system}.default = pkgs.mkShell {
-      packages = [pkgs.stack pkgs.ghc pkgs.lean4];
+      packages = [pkgs.lean4];
     };
   };
 }
